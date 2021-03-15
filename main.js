@@ -1,5 +1,5 @@
-var api = 'kprhDPh5fXdHtAxYBaVkVRq9pO5vMRSK';
-var url = "http://dataservice.accuweather.com/locations/v1/search?apikey=kprhDPh5fXdHtAxYBaVkVRq9pO5vMRSK&q=salvador%2Cbahia%2Cbrasil&language=pt-br&details=true"
+var apikey = 'kprhDPh5fXdHtAxYBaVkVRq9pO5vMRSK';
+var baseurl = "http://dataservice.accuweather.com/"
 
 
 var form = document.getElementById('location');
@@ -13,20 +13,18 @@ var response = document.getElementById('weather');
 
 var url = 'http://dataservice.accuweather.com/locations/v1/search?apikey=kprhDPh5fXdHtAxYBaVkVRq9pO5vMRSK&q=salvador%2Cbahia%2Cbrasil&language=pt-br&details=true';
 
-fetch(url)
-.then(response => response.json())
-.then((response) => {
-    return response.json()
-  })
-  .then((data) => {
-    // Work with JSON data here
-    var data = [1]['Key']
-    console.log(data)
-  })
-  .catch((err) => {
-    // Do something for an error here
-  })
-
+$.getJSON(`${baseurl}/locations/v1/postalcodes/search?`, {
+  'apikey': apikey,
+  'q': city
+}).then(function (Key) {
+  return $.getJSON(`${baseurl}/currentconditions/v1/${locData[0].Key}`, {
+      'apikey': apikey
+  });
+}).then(function (Key) {
+  const temp = tempData[0].Key;
+  console.log(`${temp.Value}`);
+});
+//${temp.Unit}
   form.addEventListener('submit', function() {
     response.innerHTML = data
 })
