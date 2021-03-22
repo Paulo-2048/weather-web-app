@@ -1,44 +1,35 @@
 <!DOCTYPE html>
-<html lang="ept-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
+    <title>Web Weather</title>
 
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Weather App</h1>
-    <h2>Site web para verificar as condições climáticas da sua cidade</h2>
-
-    <div id = 'location'>Enter location name:
-        <input id="textsearch" placeholder="new york, ny" />
-        <input type="submit" value="submit">
-    </div>
-
-    <!-- <div id=location>
-     <form action='#' id="form">
-         <label for="country">Country</label>
-         <input type="text" id=country>
-
-         <label for="country">Stade</label>
-         <input type="text" id=stade>
-
-         <label for="country">city</label>
-         <input type="text" id=city>
-
-         <input type="submit" value="submit">
-     </form>
-    </div> -->
-  
-
-    <div id=weather>
-        <h3 id=weather>Weather Response</h3>
-    </div>
-
-
-<script src="main.js"></script>
     
+    <div id="search_container">
+        <input type="text" placeholder="New York, NY" id="search_input">
+        <button class="search_control" id="search_btn">Search</button>
+    </div>
+    <div id="weather_container">
+        <div id="weather_description">
+            <h1 id="city_header"></h1>
+            <div id="weather_main">
+                <div id="temperature"></div>
+                <div id="weather_description_header"></div>
+                <div><img id='document_icon_img'></div>
+            </div>
+            <hr>
+            <div id="wind_speed" class="botton_details"></div>
+            <div id="humidity" class="botton_details"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
