@@ -1,0 +1,73 @@
+body {
+    background-image: url('img/default.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center center; */
+    color: white;
+    text-shadow: 2px 2px 1px black;
+    font-family: 'Poppins', 'Book Antiqua', Palatino, serif;
+    
+}
+
+#weather_container {
+    background-color: rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 5px black;
+    padding: 50px;
+    position: absolute;
+    visibility: hidden;
+}
+
+#weather_container h1 {
+    margin: 5px;
+    font-size: 42px;
+    font-family: 'Poppins', 'Poppins semi-bold 600', serif;
+}
+
+#search_container {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#search_container input {
+    width: 200px;
+    border-radius: 5px;
+}
+
+#search_container button {
+    background-color: rgb(1, 159, 198);
+    width: 75px;
+}
+
+.search_control {
+    box-shadow: 2px 2px 5px black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#weather_main {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#weather_main div {
+    display: inline-block;
+}
+
+#weather_description_header {
+    font-size:  28px;
+    vertical-align: 50%;
+}
+
+#temperature {
+    font-size: 38px;
+    vertical-align: 25%;
+}
+
+.botton_details {
+    display: block;
+    font-size: 24px;
+    text-align: right;
+}
