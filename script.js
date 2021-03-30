@@ -1,7 +1,7 @@
 let app_id = 'rCXJSw3S4rkQsY4VmBIaHQ44pGwYGDjJ'
 let units = 'metrics'
 let search_method = 'zip'
-var lenguage = 'pt-br'
+var lenguage = 'en'
 
 function get_search_method(search_term) {
     if(search_term.length === (5) && Number.parseInt(search_term) + '' === search_term)
@@ -240,7 +240,7 @@ function init(weather_finilize, primary_result) {
 
                 case 35:
                     //Partly Cloudy
-                    document.body.style.backgroundImage = 'url("img/partly-night-cloud.jpg")'
+                    document.body.style.backgroundImage = 'url("img/intermittent-night-clouds.jpg")'
                     break;
 
                 case 36:
@@ -255,12 +255,12 @@ function init(weather_finilize, primary_result) {
 
                 case 38:
                     //Mostly Cloudy
-                    document.body.style.backgroundImage = 'url("img/mostly-night-cloud")'
+                    document.body.style.backgroundImage = 'url("img/mostly-night-cloud.jpg")'
                     break;
 
                 case 39:
                     //Partly Cloudy w/ Showers
-                    document.body.style.backgroundImage = 'url("showers-night.jpg")'
+                    document.body.style.backgroundImage = 'url("img/showers-night.jpg")'
                     break;
 
                 case 40:
